@@ -9,7 +9,7 @@ class Schema:
         self._queries = {}
         self._mutations = {}
         self.group_by_opr_type(resolvers)
-        self.graphql_schema = StrawberrySchema(
+        self.strawberry_schema = StrawberrySchema(
             query=self.create_to_strawberry_root_query()
         )
 

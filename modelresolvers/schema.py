@@ -25,4 +25,5 @@ class Schema:
         resolvers = {
             name: strawberry.field(resolver) for name, resolver in self._queries.items()
         }
-        return strawberry.type(type("Query", (), resolvers))
+        query = type("Query", (), resolvers)
+        return strawberry.type(query)

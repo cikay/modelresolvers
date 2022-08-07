@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 strawberry-graphql = {extras = ["debug-server"], version = "*"}
+pytest = "*"
 
 [dev-packages]
 

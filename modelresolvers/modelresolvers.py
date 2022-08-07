@@ -10,6 +10,7 @@ class ModelResolvers:
         def decorator(func: Callable):
             type_ = name or func.__name__
             self._queries[type_] = func
+            return func
 
         return decorator
 

@@ -10,7 +10,8 @@ class Schema:
         self._mutations = {}
         self.group_by_opr_type(resolvers)
         self.strawberry_schema = StrawberrySchema(
-            query=self.create_strawberry_root_query()
+            query=self.create_strawberry_root_query(),
+            mutation=self.create_strawberry_root_mutation(),
         )
 
     def group_by_opr_type(self, resolvers: list[ModelResolvers]):
@@ -27,3 +28,11 @@ class Schema:
         }
         query = type("Query", (), resolvers)
         return strawberry.type(query)
+
+    def create_strawberry_root_mutation(self):
+        resolvers = {
+            name: strawberry.mutation(resolver)
+            for name, resolver in self._mutations.items()
+        }
+        mutation = type("Mutation", (), resolvers)
+        return strawberry.type(mutation)

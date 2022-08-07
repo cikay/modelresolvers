@@ -10,7 +10,7 @@ class Schema:
         self._mutations = {}
         self.group_by_opr_type(resolvers)
         self.strawberry_schema = StrawberrySchema(
-            query=self.create_to_strawberry_root_query()
+            query=self.create_strawberry_root_query()
         )
 
     def group_by_opr_type(self, resolvers: list[ModelResolvers]):
@@ -21,7 +21,7 @@ class Schema:
             for type_, res in resolver._mutations.items():
                 self._mutations[type_] = res
 
-    def create_to_strawberry_root_query(self):
+    def create_strawberry_root_query(self):
         resolvers = {
             name: strawberry.field(resolver) for name, resolver in self._queries.items()
         }

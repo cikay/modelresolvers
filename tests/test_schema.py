@@ -14,3 +14,16 @@ def test_create_strawberry_root_mutation(monkeypatch: MonkeyPatch):
 
     output = Schema.create_strawberry_root_mutation()
     assert output == strawberry_root_mutations
+
+
+def test_create_strawberry_root_query(monkeypatch: MonkeyPatch):
+    root_query = type("Query", (), {})
+
+    strawberry_root_queries = strawberry.type(root_query)
+    monkeypatch.setattr(
+        "modelresolvers.schema.Schema.create_strawberry_root_query",
+        lambda: strawberry_root_queries,
+    )
+
+    output = Schema.create_strawberry_root_query()
+    assert output == strawberry_root_queries

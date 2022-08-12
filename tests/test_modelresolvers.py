@@ -20,4 +20,4 @@ def test_mutation_decorator():
     def add_user(firstname: str, lastname: str) -> str:
         return f"{firstname} {lastname}"
 
-    assert user_resolvers._mutations == {"add_user": add_user}
+    assert user_resolvers._mutations == ""

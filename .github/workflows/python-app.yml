@@ -28,5 +28,5 @@ jobs:
       - name: Run tests
         run: |
           pipenv install
-          pipenv run pytest
+          pytest tests/
 

@@ -4,6 +4,10 @@ modelresolvers is a python grapqhl package(inspired by [type-graphql](https://ty
 [strawberry](https://github.com/strawberry-graphql/strawberry) to structure your project by feature(model) instead of operation type(mutation and query)
 to manage it easier.
 
+### Requirement
+
+python3.10 and above
+
 ### Install by the following command
 
 `pip install modelresolvers`

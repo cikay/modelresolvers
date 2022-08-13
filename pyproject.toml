@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "modelresolvers"
+version = "v0.1.0"
+description = "modelresolvers is python package"
+authors = ["Muzaffer Cıkay"]
+license = "MIT License"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+strawberry-graphql = {extras = ["debug-server"], version = "*"}
+pytest = "*"
+flake8 = "*"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

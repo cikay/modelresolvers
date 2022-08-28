@@ -27,6 +27,12 @@ Install dependencies
 pipenv install fastapi modelresolvers uvicorn
 ```
 
+Activate virtual environment
+
+```
+pipenv shell
+```
+
 #### Define User model
 
 Create `user.py` under `models` folder
@@ -229,3 +235,11 @@ graphql_app = GraphQLRouter(schema)
 app = FastAPI()
 app.include_router(graphql_app, prefix="/graphql")
 ```
+
+Run the application
+
+```
+uvicorn main:app --reload
+```
+
+Go to `http://127.0.0.1:8000/graphql` and run queries and mutations

@@ -44,7 +44,7 @@ def user() -> User:
 
 @user_resolvers.mutation(name="add_user")
 def add_user(firstname: str, lastname: str) -> User:
-    user = User(firstname, lastname)
+    user = User(firstname=firstname, lastname=lastname)
     users.append(user)
     return user
 

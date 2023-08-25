@@ -1,0 +1,18 @@
+site_name: modelresolvers
+repo_url: https://github.com/cikay/modelresolvers
+repo_name: cikay/modelresolvers
+theme:
+  name: material
+  # Palette toggle for light mode
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny 
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+nav:
+  - Get started: get_started.md
+  - FastAPI example: fastapi_example.md

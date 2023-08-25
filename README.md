@@ -13,6 +13,8 @@ python3.10 and above
 `pip install modelresolvers`
 
 
+Documentation: https://cikay.github.io/modelresolvers/
+
 ### Examples
 
 Put the following example to main.py

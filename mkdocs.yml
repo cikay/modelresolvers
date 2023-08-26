@@ -2,6 +2,9 @@ site_name: modelresolvers
 repo_url: https://github.com/cikay/modelresolvers
 repo_name: cikay/modelresolvers
 theme:
+theme:
+  features:
+    - content.code.copy
   name: material
   # Palette toggle for light mode
   palette:

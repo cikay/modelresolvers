@@ -1,5 +1,3 @@
-## FastAPI example
-
 ### Project Setup
 
 This project folder structure is like the below.

@@ -1,5 +1,3 @@
-## FastAPI example
-
 ### Project Setup
 
 This project folder structure is like the below.
@@ -33,7 +31,7 @@ Activate virtual environment
 pipenv shell
 ```
 
-#### Define User model
+### Define User model
 
 Create `user.py` under `models` folder
 

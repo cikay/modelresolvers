@@ -15,54 +15,29 @@ Install modelresolvers
 pipenv install modelresolvers
 ```
 
-Create a Python file called `main.py`
-Import `strawberry`
 
-```py
+```py title="main.py"
 import strawberry
-```
 
-Import `ModelResolvers` and `Schema` modules from `modelresolvers` package
-
-```py
 from modelresolvers import ModelResolvers, Schema
-```
 
-Create an instance of Modelresolvers
-
-```py
-user_resolvers = ModelResolvers()
-```
-
-Define a strawberry type
-
-```py
 @strawberry.type
 class User:
     firstname: str
     lastname: str
-```
 
-Create users list to simulate data set
 
-```py
 users = [
     User(firstname="John", lastname="Doe"),
     User(firstname="Jahe", lastname="Doe"),
 ]
-```
 
-Write your first query
 
-```py
 @user_resolvers.query(name="user")
 def user() -> User:
     return users[0]
-```
 
-Write your first mutation
 
-```py
 @user_resolvers.mutation(name="add_user")
 def add_user(firstname: str, lastname: str) -> User:
     user = User(firstname=firstname, lastname=lastname)
@@ -80,7 +55,7 @@ schema = Schema(models_resolvers=[user_resolvers]).strawberry_schema
 
 The entire code is below.
 
-```py
+```py title="main.py"
 import strawberry
 from modelresolvers import ModelResolvers, Schema
 

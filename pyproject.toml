@@ -1,9 +1,11 @@
 [tool.poetry]
 name = "modelresolvers"
 version = "v0.2.1"
-description = "modelresolvers is python package"
+description = "Modelresolvers structures your GraphQL project by feature instead of operation type such as query and mutation to manage it easier"
+readme = "README.md"
 authors = ["Muzaffer Cıkay"]
 license = "MIT License"
+
 
 [tool.poetry.dependencies]
 python = "^3.10"

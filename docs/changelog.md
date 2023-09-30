@@ -1,3 +1,9 @@
+## 0.2.2
+
+### Docs
+* add description and readme to PYPI [#39](https://github.com/cikay/modelresolvers/pull/39) by [cikay](https://github.com/cikay)
+
+
 ## 0.2.1
 
 ### Upgrades
